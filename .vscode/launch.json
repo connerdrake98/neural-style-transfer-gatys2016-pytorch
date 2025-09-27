@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Style Transfer (LBFGS, in container)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "--content", "data/content.jpg",
+        "--style", "data/style.jpg",
+        "--out", "data/outputs/out_lbfgs.jpg",
+        "--size", "512",
+        "--steps", "300",
+        "--content-weight", "1e5",
+        "--style-weight", "1.0",
+        "--tv-weight", "1e-6",
+        "--optimizer", "lbfgs",
+        "--init", "content"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "Style Transfer (Adam, in container)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "--content", "data/content.jpg",
+        "--style", "data/style.jpg",
+        "--out", "data/outputs/out_adam.jpg",
+        "--size", "512",
+        "--steps", "1000",
+        "--content-weight", "1e5",
+        "--style-weight", "1.0",
+        "--tv-weight", "1e-6",
+        "--optimizer", "adam",
+        "--lr", "0.03",
+        "--init", "content"
+      ],
+      "justMyCode": true
+    }
+  ]
+}

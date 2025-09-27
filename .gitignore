@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/outputs/*
+.app-cache/
+
+# Ignoring my input/style images
+data/content*.*
+data/style*.*
+data/*.jpg
+data/*.jpeg
+data/*.png
+
+# Ignore local data artifacts...
+data/inputs/
+data/tmp/
+
+# Torch / Python caches & model files
+.cache/
+.cache/torch/
+*.pth
+*.pt
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+*.log
+
+# Docker export artifacts (imgs exported to tar files)
+*.tar
+*.tar.gz
+docker-compose.override.yml
+
+# OS and editor things
+.DS_Store
+Thumbs.db
+.idea/
+.ipynb_checkpoints/

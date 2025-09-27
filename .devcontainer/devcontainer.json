@@ -1,0 +1,28 @@
+{
+  "name": "Style Transfer (PyTorch)",
+  "build": {
+    "dockerfile": "docker/Dockerfile",
+    "context": "..",
+    "args": {
+      "PYTORCH_IMAGE": "pytorch/pytorch:2.3.1-cpu"
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind"
+  ],
+  "remoteUser": "root",
+  "runArgs": [],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/bin/python",
+        "terminal.integrated.cwd": "/app"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy"
+      ]
+    }
+  },
+  "postCreateCommand": "python -c \"import torchvision, torch; print('Torch:', torch.__version__, ' | TV:', torchvision.__version__)\""
+}

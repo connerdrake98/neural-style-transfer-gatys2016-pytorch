@@ -1,0 +1,4 @@
+Pillow>=10.0
+numpy>=1.24
+tqdm>=4.66
+# torch/torchvision are provided via the pytorch/pytorch base image, if you don't use Docker then you will need to install these as well

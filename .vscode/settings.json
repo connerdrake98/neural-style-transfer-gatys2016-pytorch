@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "/opt/conda/bin/python",
+  "python.analysis.typeCheckingMode": "off",
+  "terminal.integrated.cwd": "${workspaceFolder}"
+}
