@@ -1,6 +1,6 @@
-# Neural Style Transfer (Docker + VS Code)
+# Neural Style Transfer (Docker)
 
-Gatys et al. (2016) style transfer in PyTorch, packaged for Docker and VS Code.
+Gatys et al. (2016) style transfer in PyTorch using Docker
 
 ## Quick Start
 
